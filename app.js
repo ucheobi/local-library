@@ -12,7 +12,7 @@ var catalogRouter = require('./routes/catalog');
 
 var app = express();
 
-var mongoDB = 'mongodb+srv://uchemongod:godisgood@cluster0-ji3mw.mongodb.net/local_library?retryWrites=true';
+var mongoDB = MONGO_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
